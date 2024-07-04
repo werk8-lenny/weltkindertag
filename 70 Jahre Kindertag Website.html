@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One-Pager Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: url(Hintergrund\ Bild\ v2.png);
+      }
+      .hero {
+        background-image: url(Schwung\ Verlauf.png);
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        flex-direction: column;
+        padding-top: 60px;
+      }
+      .hero h1 {
+        font-weight: 900; /* Schriftschnitt Black */
+        margin: 0;
+        font-size: 4em; /* Verdoppelte Schriftgröße */
+      }
+      .hero h2 {
+        font-weight: 900; /* Schriftschnitt Black */
+        color: #ffffff;
+        margin: 5px 0 0;
+        font-size: 2em; /* Verdoppelte Schriftgröße */
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      .text-image {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+      .text-image:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .text-image img {
+        width: 50%;
+        height: auto;
+      }
+      .text {
+        width: 50%;
+        padding: 20px;
+      }
+      .text h2 {
+        font-weight: 700;
+      }
+      .text p {
+        font-weight: 600;
+      }
+      .center-text {
+        text-align: center;
+        padding: 20px 0;
+      }
+      .center-text p {
+        font-weight: 600;
+      }
+      .circles {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+      }
+      .circle {
+        width: 360px; /* Verdreifachte Größe */
+        height: 360px; /* Verdreifachte Größe */
+        border-radius: 50%;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+      }
+      .circle.red {
+        background-color: #dc3636;
+      }
+      .circle.yellow {
+        background-color: #e3bd34;
+      }
+      .circle.orange {
+        background-color: #e36834;
+      }
+      .circle h3 {
+        font-weight: 700;
+        margin: 0;
+        font-size: 2em; /* Größere Schriftgröße */
+      }
+      .circle p {
+        font-weight: 600;
+        margin: 10px 0 0;
+        font-size: 1.5em; /* Größere Schriftgröße */
+      }
+      .bubble-illustration {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px 0;
+        position: relative;
+        height: 150px;
+        width: 100%;
+      }
+      .bubble-illustration .circle {
+        position: absolute;
+        border-radius: 50%;
+      }
+      .bubble-illustration .circle-1 {
+        width: 120px;
+        height: 120px;
+        background-color: #dc3636;
+        top: 10px;
+        left: 10%;
+      }
+      .bubble-illustration .circle-2 {
+        width: 90px;
+        height: 90px;
+        background-color: #e3bd34;
+        top: 20px;
+        left: 30%;
+      }
+      .bubble-illustration .circle-3 {
+        width: 60px;
+        height: 60px;
+        background-color: #e36834;
+        top: 50px;
+        left: 50%;
+      }
+      .bubble-illustration .circle-4 {
+        width: 30px;
+        height: 30px;
+        background-color: #dc3636;
+        top: 60px;
+        left: 70%;
+      }
+      .bubble-illustration .circle-5 {
+        width: 40px;
+        height: 40px;
+        background-color: #e3bd34;
+        top: 90px;
+        left: 90%;
+      }
+      .bubble-illustration .circle-6 {
+        width: 50px;
+        height: 50px;
+        background-color: #e36834;
+        top: 30px;
+        right: 10%;
+      }
+      .bubble-illustration .circle-7 {
+        width: 35px;
+        height: 35px;
+        background-color: #dc3636;
+        top: 110px;
+        right: 30%;
+      }
+      .bubble-illustration .circle-8 {
+        width: 30px;
+        height: 30px;
+        background-color: #e36834;
+        top: 60px;
+        right: 50%;
+      }
+      .bubble-illustration .circle-9 {
+        width: 40px;
+        height: 40px;
+        background-color: #e3bd34;
+        top: 90px;
+        right: 70%;
+      }
+      .bubble-illustration .circle-10 {
+        width: 50px;
+        height: 50px;
+        background-color: #dc3636;
+        top: 30px;
+        right: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <html lang="de">
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>Onepager</title>
+          <style>
+            body,
+            html {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              font-family: Arial, sans-serif;
+            }
+            .header {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 20px;
+              background: rgba(255, 255, 255, 0.2); /* Transparent */
+              backdrop-filter: blur(10px); /* Optional: adds a blur effect */
+            }
+            .logo {
+              font-size: 24px;
+              font-weight: bold;
+            }
+            .burger-menu {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              height: 24px;
+              cursor: pointer;
+            }
+            .burger-menu div {
+              width: 30px;
+              height: 3px;
+              background: white;
+            }
+            .menu-content {
+              display: none;
+              position: fixed;
+              top: 60px;
+              right: 20px;
+              background: white;
+              border: 1px solid #ccc;
+              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+              padding: 10px;
+              border-radius: 5px;
+            }
+            .menu-content a {
+              display: block;
+              padding: 10px 20px;
+              text-decoration: none;
+              color: black;
+            }
+            .menu-content a:hover {
+              background: #f0f0f0;
+            }
+            .hero {
+              height: 100vh;
+              background: url(Schwung\ Verlauf.png)
+                no-repeat center center;
+              background-size: cover;
+            }
+          </style>
+        </head>
+        <body>
+          <header class="header">
+            <div>
+              <img
+                src="Frame 20.png"
+                alt="file:///Users/werk8/Downloads/Frame%2020.png"
+                width="160px"
+                style="margin-left: 30px"
+              />
+            </div>
+            <div class="burger-menu" onclick="toggleMenu()" style="margin-right: 80px;">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="menu-content" id="menu-content" style="margin-right: 40px;">
+              <a href="#section1">Kinderrechte</a>
+              <a href="#section2">Unterstützung</a>
+              <a href="#section3">Geschichte</a>
+              <a href="#section4">Ort/ Uhrzeit</a>
+              <a href="#section5">Kontakt</a>
+            </div>
+          </header>
+
+          <div class="hero">
+            <!-- Hero content goes here -->
+          </div>
+
+          <script>
+            function toggleMenu() {
+              const menuContent = document.getElementById('menu-content');
+              if (menuContent.style.display === 'block') {
+                menuContent.style.display = 'none';
+              } else {
+                menuContent.style.display = 'block';
+              }
+            }
+          </script>
+        </body>
+      </html>
+<section id="section1">
+
+  <h1 style="margin-bottom: 4px">70 Jahre Weltkindertag</h1>
+  <h2 style="margin-bottom: 150px">Mit Kinderrechten in die Zukunft</h2>
+</div>
+<div class="container">
+  <div class="text-image">
+    <img
+      src="bild bunt.jpg"
+      alt="28"
+    />
+    <div class="text">
+      <img
+        src="Bubbles.png"
+        alt="file:///Users/werk8/Downloads/_intern/Berufsschule/Projekte/Weltkindertag/Assets/Bubbles.png"
+        style="margin-left: 300px; width: 220px"
+      />
+      <h2>Was sind Kinderrechte?</h2>
+      <p style="font-weight: lighter;">
+        Kinder und Jugendliche haben auf der ganzen Welt Rechte,<br />
+        zum Beispiel in Frieden zu leben, in die Schule zu gehen, keine
+        Gewalt erleben zu müssen oder persönliche Geheimnisse zu haben.<br />
+        Aber nicht immer werden diese Rechte beachtet. Vor mehr als 30
+        Jahren hat die UNO (ein Zusammenschluss von fast allen Ländern auf
+        der Welt)<br />
+        einen Vertrag über die Kinderrechte geschlossen und alle müssen
+        aufpassen,<br />
+        dass diese Rechte auch für alle Kinder und Jugendliche eingehalten
+        werden!<br />
+      </p>
+    </div>
+  </div>
+
+  <div class="bubble-illustration">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+    <div class="circle circle-4"></div>
+    <div class="circle circle-5"></div>
+    <div class="circle circle-6"></div>
+    <div class="circle circle-7"></div>
+    <div class="circle circle-8"></div>
+    <div class="circle circle-9"></div>
+    <div class="circle circle-10"></div>
+  </div>
+
+  <div class="text-image">
+    <div class="text">
+      <h2>Was erwartet euch?</h2>
+      <p style="font-weight: lighter;">
+        Zum 5. Mal findet der Weltkindertag im Hallschlag statt. Im
+        Römerkastell<br />
+        <b>(auf dem Platz gegenüber dem REWE)</b> könnt ihr euch zuerst eine
+        Laufkarte <br />
+        abholen und nach und nach alle Stationen besuchen.<br />
+        Dort lernt ihr mit Spiel und Spaß welche Rechte ihr habt und was sie
+        bedeuten.<br />
+        Zudem gibt es ein Bühnenprogramm und zum Schluss könnt ihr ein Eis
+        gewinnen.<br />
+        Essen und Getränke könnt ihr während des Kinderfestes vor Ort
+        kaufen.<br />
+        Und ein paar Überraschungen erwarten Euch außerdem auch noch.<br /><br /><i
+          >Kontakt: hallschlagaktuell@gmx.de</i
+        >
+      </p>
+    </div>
+    <img
+      src="Viele hände.jpg"
+      alt="hände"
+    />
+  </div>
+</section>
+
+      <section id="section2">
+        <div class="center-text">
+          <p style="font-size: xx-large; font-weight: bold">
+            Wir danken für finanzielle Unterstützung:
+          </p>
+        </div>
+  
+        <div class="circles">
+          <div class="circle red">
+            <h3>
+              <img
+                src="Frame 22.png"
+                alt="file:///Users/werk8/Downloads/Logos/Frame%2024.png"
+                style="width: 240px"
+              />
+            </h3>
+          </div>
+          <div class="circle yellow">
+            <h3>
+              <img
+                src="Frame 24.png"
+                alt="Frame 24.png"
+                style="width: 240px"
+              />
+            </h3>
+          </div>
+          <div class="circle orange">
+            <h3>
+              <img
+                src="Frame 21.png"
+                alt="file:///Users/werk8/Downloads/Logos/Frame%2023.png"
+                style="width: 240px"
+              />
+            </h3>
+          </div>
+          <div class="circle red">
+            <h3>
+              <img
+                src="Frame 23.png"
+                alt="file:///Users/werk8/Downloads/Logos/Frame%2022.png"
+                style="width: 240px"
+              />
+            </h3>
+          </div>
+        </div>
+      </section>
+      <div class="center-text">
+        <p style="font-size: larger">
+          <h3>Wir freuen uns über die gemeinsame Realisierung mit den engagierten
+            Einrichtungen:</h3> <br />
+          <p style="font-weight: lighter;">(nur Aufzählung, keine Logos)<br />
+            Aki Dracheninsel<br />
+            Abenteuerspielplatz Mauga-Nescht<br />
+            Schulsozialarbeit Altenburg-Gemeinschaftsschule<br />
+            Lessing-Schulen bzw. Manfred-Ehringer Grundschule<br />
+            Förderverein der Carl Benz Grundschule<br />
+            Kinder- und Jugendhaus Hallschlag<br />
+            Mobile Jugendarbeit Hallschlag<br />
+            Stadtteilhaus Hallschlag<br />
+            Malteser - Geflüchtetenunterkunft GU<br />
+            Hilfen zur Erziehung eva<br />
+            Jugendmigrationsdienst im Quartier Katholische Gesamtkirchengemeinde
+            Stuttgart-Neckar</p>
+        </p>
+      </div>
+
+      <div>
+        <img
+          src="transparent kinder.png"
+          alt="file:///Users/werk8/Downloads/_intern/Berufsschule/Projekte/Weltkindertag/Assets/Ausgewa%CC%88hlte%20Bilder/29.png"
+          width="1440"
+        />
+      </div>
+      <div></div>
+      <div class="center-text">
+        <p style="font-size: xx-large; font-weight: bold">
+          Unserer Meinung nach die wichtigsten Kinderrechte:
+        </p>
+      </div>
+      <div class="circles">
+        <div class="circle red">
+          <h2>Das Recht <br> auf Gesundheit</h2>
+          <h3>
+            <img
+              src="Recht auf Gesundheit.png"
+              alt="file:///Users/werk8/Downloads/_intern/Berufsschule/Projekte/Weltkindertag/Assets/Midjourney%20Bilder/Recht%20auf%20Gesundheit.png"
+              style="width: 240px; border-radius: 50%"
+            />
+          </h3>
+        </div>
+        <div class="circle yellow">
+          <h2>Das Recht <br> auf Bildung</h2>
+          <h3>
+            <img
+              src="Recht auf Bildung.png"
+              alt="file:///Users/werk8/Downloads/_intern/Berufsschule/Projekte/Weltkindertag/Assets/Midjourney%20Bilder/Recht%20auf%20Bildung.png"
+              style="width: 240px; border-radius: 50%"
+            />
+          </h3>
+        </div>
+        <div class="circle orange">
+          <h2>Das Recht <br> auf Freizeit</h2>
+          <h3>
+            <img
+              src="Recht auf Freizeit.png"
+              alt="file:///Users/werk8/Downloads/_intern/Berufsschule/Projekte/Weltkindertag/Assets/Midjourney%20Bilder/Recht%20auf%20Freizeit.png"
+              style="width: 240px; border-radius: 50%"
+            />
+          </h3>
+        </div>
+      </div>
+      <div class="container">
+        <div class="text-image">
+          <img
+            src="klettertyp.jpg"
+            alt="Bild 1"
+          />
+          <div class="text">
+            <img
+              src="Bubbles.png"
+              alt="file:///Users/werk8/Downloads/_intern/Berufsschule/Projekte/Weltkindertag/Assets/Bubbles.png"
+              style="margin-left: 300px; width: 220px"
+            />
+            <section id="section3">
+              <h2>Kinderrechte</h2>
+            <p style="font-weight: lighter;">
+              
+Die Kinderrechte wurden am 20. November 1989 von den Mitgliedstaaten der Vereinten Nationen<br> 
+<i>(UNO=United Nations Organisation)</i> beschlossen, um den Kindern weltweit ihre eigenen Rechte zu geben.<br>
+ Diese wurden dann in der sogenannten Kinderrechtskonvention zusammengefasst. Sie hat über 50 Artikel<br>
+  <i>(Abschnitte zu bestimmten Themen)</i>. In denen steht unter anderem, dass Kinder auch vom Staat vor<br>
+   Gewalt und Ausbeutung geschützt werden müssen.
+
+
+
+            </p>
+          </div>
+        </div>
+  
+        <div class="bubble-illustration">
+          <div class="circle circle-1"></div>
+          <div class="circle circle-2"></div>
+          <div class="circle circle-3"></div>
+          <div class="circle circle-4"></div>
+          <div class="circle circle-5"></div>
+          <div class="circle circle-6"></div>
+          <div class="circle circle-7"></div>
+          <div class="circle circle-8"></div>
+          <div class="circle circle-9"></div>
+          <div class="circle circle-10"></div>
+        </div>
+          </div>
+          <div style="margin: 6%;">
+            <p style="font-size: larger">
+              <h2>Die Geschichte des Weltkindertages</h2>
+              <p>Die 9. Vollversammlung der Vereinten Nationen am 21. September 1954 war die Geburtsstunde des Weltkindertages.<br>
+                 Damals empfahl sie ihren Mitgliedsstaaten, einen weltweiten Kindertag einzurichten.<br>
+                Drei Ziele wurden damit verfolgt:<br><br>
+                <i>
+                  <h3>1.	Einsatz für die Rechte der Kinder<br><br></h3>
+                <h3>2.	Förderung der Freundschaft unter den Kindern und Jugendlichen<br><br></h3>
+                <h3>3.	Einmal im Jahr sollten sich die Regierungen öffentlich verpflichten, die Arbeit des Kinderhilfswerks der Vereinten Nationen UNICEF zu unterstützen.<br><br></h3>
+                </i>
+                </p>
+            </p>
+          </div>
+            </section>
+          <div class="center-text">
+            <p style="font-size: larger; margin-bottom: 20px; margin-top: 40px;">
+              <h2>Mehr mit dem Thema Kinderrechte finden sie hier :</h2>
+              <p style="font-weight: lighter;">
+                <h3>Kinderrechte Song:</h3><br>
+<p style="font-weight: lighter;"><i>https://www.kindersache.de/sites/default/files/2021-11/Ich%20Darf%20Das_441Khz_24bit.wavy</i></p>
+
+<h3>Weitere Links:</h3><br>
+<i>https://www.weltkindertag.de/index.php</i><br>
+<i>https://www.kindersache.de/</i><br>
+<i>https://www.unicef.de/informieren/materialien/kinderrechtskonvention-arabisch/107350</i><br>
+
+              </p>
+            </p>
+          </div>
+          <img
+          src="map.png"
+          alt="file:///Users/werk8/Downloads/Logos/map.png"
+          width="1440"
+        />
+        <section id="section4">
+          <div class="center-text">
+            <p style="font-size: larger; margin-bottom: 20px; margin-top: 40px;">
+              <h3>Wo sie uns finden ?</h3>
+              <p style="font-weight: lighter;">
+                Freitag, 20.09.2024
+                  Im Römerkastell Hallschlag
+                  13-16 Uhr
+              </p>
+            </p>
+          </div>
+            <div>
+              <title>Kontaktformular</title>
+            </head>
+            <body>
+            </section>
+            <section id="section5">
+              <div
+                style="
+                  width: 100%;
+                  background-image: url(Kontaktformular\ Bild.png);
+                  background-size: cover;
+                  color: rgb(255, 255, 255);
+                  padding: 20px;
+                "
+              >
+                <form
+                  action="submit_form.php"
+                  method="post"
+                  style="max-width: 800px; margin: 0 auto"
+                >
+        
+                
+                  <h2>Kontaktieren Sie uns</h2>
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  style="width: 100%; padding: 10px; margin: 10px 0"
+                />
+
+                <label for="email">E-Mail:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  style="width: 100%; padding: 10px; margin: 10px 0"
+                />
+
+                <label for="message">Nachricht:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  style="width: 100%; padding: 10px; margin: 10px 0"
+                ></textarea>
+
+                <button
+                  type="submit"
+                  style="
+                    background-color: #000000;
+                    color: rgb(255, 255, 255);
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                  "
+                >
+                  Absenden
+                </button>
+              </form>
+            </div>
+          </div>
+                </section>
+          </body>
+        </html>
+      </div>
+    </div>
+  </body>
+</html>
